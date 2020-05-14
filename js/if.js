@@ -8,8 +8,8 @@ var opciones = ['piedra', 'papel', 'tijera'], // Jugadas válidas
 	info2 = '\n\nJugadas válidas:\n"Piedra", "Papel" ó "Tijera".'; // Info sobre jugadas válidas a mostrar en consola
 
 function PPT (a, b) {
-	let J1 = (a) ? a.toLowerCase() : null,
-		J2 = (b) ? b.toLowerCase() : null,
+	let J1 = (a) ? a.toLowerCase() : null, // Pasamos minúsculas para evitar
+		J2 = (b) ? b.toLowerCase() : null, // algunos problemas en las comparaciones
 		J1Nombre = 'Jugador 1',
 		J2Nombre = 'Jugador 2';
 
@@ -55,8 +55,8 @@ function PPT (a, b) {
 			return console.warn (`Empate por ${J2}.`); // Las jugadas son iguales
 		}
 	} else {
-		return console.error ('Falta(n) jugada(s) o no son válidas.', info2); // Falta alguna jugada o no son válidas
+		return console.error ('Falta(n) jugada(s) o no son válidas.', info2); // Falta alguna jugada o ninguna es válida
 	}
 }
 
-console.info (info, info2)
+console.info (info, info2) //Muestra info sobre el juego en consola al cargar el archivo
