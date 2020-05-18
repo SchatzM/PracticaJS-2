@@ -9,9 +9,9 @@ var opciones = ['piedra', 'papel', 'tijera'], // Jugadas válidas
 	info2 = '\n\nJugadas válidas:\n"Piedra", "Papel" ó "Tijera".'; // Info sobre jugadas válidas a mostrar en consola
 
 // Función principal
-function PPT (a, b) {
-	let Jugador1 = (a) ? a.toLowerCase () : null, // Pasamos minúsculas para evitar
-		Jugador2 = (b) ? b.toLowerCase () : null, // algunos problemas en las comparaciones
+function PPT (JugadaJugador1, JugadaJugador2) {
+	let Jugador1 = (JugadaJugador1) ? JugadaJugador1.toLowerCase () : null, // Pasamos minúsculas para evitar
+		Jugador2 = (JugadaJugador2) ? JugadaJugador2.toLowerCase () : null, // algunos problemas en las comparaciones
 		Jugador1Nombre = 'Jugador 1',
 		Jugador2Nombre = 'Jugador 2';
 
