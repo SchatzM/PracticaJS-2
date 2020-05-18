@@ -10,72 +10,72 @@ var opciones = ['piedra', 'papel', 'tijera'], // Jugadas válidas
 
 // Función principal
 function PPT (a, b) {
-	let J1 = (a) ? a.toLowerCase () : null, // Pasamos minúsculas para evitar
-		J2 = (b) ? b.toLowerCase () : null, // algunos problemas en las comparaciones
-		J1Nombre = 'Jugador 1',
-		J2Nombre = 'Jugador 2';
+	let Jugador1 = (a) ? a.toLowerCase () : null, // Pasamos minúsculas para evitar
+		Jugador2 = (b) ? b.toLowerCase () : null, // algunos problemas en las comparaciones
+		Jugador1Nombre = 'Jugador 1',
+		Jugador2Nombre = 'Jugador 2';
 
-	switch (J1) {
-		case opciones[0]: //Si la jugada de J1 es piedra
-			switch (J2) {
-				case opciones[0]: // Si la jugada de J2 también es piedra
-					console.warn (`Empate por ${J2}.`) //Empate
+	switch (Jugador1) {
+		case opciones[0]: //Si la jugada de Jugador1 es piedra
+			switch (Jugador2) {
+				case opciones[0]: // Si la jugada de Jugador2 también es piedra
+					console.warn (`Empate por ${Jugador2}.`) //Empate
 				break;
 				case opciones[1]:
-					console.warn (`Gana ${J2Nombre} con ${J2}.`) // Papel gana a piedra
+					console.warn (`Gana ${Jugador2Nombre} con ${Jugador2}.`) // Papel gana a piedra
 				break;
 				case opciones[2]:
-					console.warn (`Gana ${J1Nombre} con ${J1}.`) // Piedra gana a tijera
+					console.warn (`Gana ${Jugador1Nombre} con ${Jugador1}.`) // Piedra gana a tijera
 				break;
 				default:
-					switch (J2) {
-						case null: // Si no se encuentra la jugada de J2
-							console.error (`Falta la jugada de ${J2Nombre}`)
+					switch (Jugador2) {
+						case null: // Si no se encuentra la jugada de Jugador2
+							console.error (`Falta la jugada de ${Jugador2Nombre}`)
 						break;
 						default:
-							console.error (`Jugada no válida "${J2}".`, info2) // Si no se reconoce la jugada de J2
+							console.error (`Jugada no válida "${Jugador2}".`, info2) // Si no se reconoce la jugada de Jugador2
 					}
 			}
 		break;
-		case opciones[1]: // Si la jugada de J1 es papel
-			switch (J2) {
+		case opciones[1]: // Si la jugada de Jugador1 es papel
+			switch (Jugador2) {
 				case opciones[0]:
-					console.warn (`Gana ${J1Nombre} con ${J1}.`) // Papel gana a piedra
+					console.warn (`Gana ${Jugador1Nombre} con ${Jugador1}.`) // Papel gana a piedra
 				break;
-				case opciones[1]: // Si la jugada de J2 también es papel
-					console.warn (`Empate por ${J2}.`) // Empate
+				case opciones[1]: // Si la jugada de Jugador2 también es papel
+					console.warn (`Empate por ${Jugador2}.`) // Empate
 				break;
 				case opciones[2]:
-					console.warn (`Gana ${J2Nombre} con ${J2}.`)  // Tijera gana a papel
+					console.warn (`Gana ${Jugador2Nombre} con ${Jugador2}.`)  // Tijera gana a papel
 				break;
 				default:
-					switch (J2) {
+					switch (Jugador2) {
 						case null:
-							console.error (`Falta la jugada de ${J2Nombre}`) // Si no se encuentra la jugada de J2
+							console.error (`Falta la jugada de ${Jugador2Nombre}`) // Si no se encuentra la jugada de Jugador2
 						break;
 						default:
-							console.error (`Jugada no válida "${J2}".`, info2) // Si no se reconoce la jugada de J2
+							console.error (`Jugada no válida "${Jugador2}".`, info2) // Si no se reconoce la jugada de Jugador2
 					}
 			}
 		break;
-		case opciones[2]: //Si la jugada de J1 es tijera
-			switch (J2) {
+		case opciones[2]: //Si la jugada de Jugador1 es tijera
+			switch (Jugador2) {
 				case opciones[0]:
-					console.warn (`Gana ${J2Nombre} con ${J2}.`) // Piedra gana a tijera
+					console.warn (`Gana ${Jugador2Nombre} con ${Jugador2}.`) // Piedra gana a tijera
 				break;
 				case opciones[1]:
-					console.warn (`Gana ${J1Nombre} con ${J1}.`) // Tijera gana a papel
+					console.warn (`Gana ${Jugador1Nombre} con ${Jugador1}.`) // Tijera gana a papel
 				break;
-				case opciones[2]: // Si la jugada de J2 también es tijera
-					console.warn (`Empate por ${J2}.`) // Empate
+				case opciones[2]: // Si la jugada de Jugador2 también es tijera
+					console.warn (`Empate por ${Jugador2}.`) // Empate
 				break;
 				default:
-					switch (J2) {
+					switch (Jugador2) {
 						case null:
-							console.error (`Falta la jugada de ${J2Nombre}`) // Si no se encuentra la jugada de J2
+							console.error (`Falta la jugada de ${Jugador2Nombre}`) // Si no se encuentra la jugada de Jugador2
 						break;
 						default:
-							console.error (`Jugada no válida "${J2}".`, info2) // Si no se reconoce la jugada de J2
+							console.error (`Jugada no válida "${Jugador2}".`, info2) // Si no se reconoce la jugada de Jugador2
 					}
 			}
 		break;
